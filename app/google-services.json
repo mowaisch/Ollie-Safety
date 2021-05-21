@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "369213621621",
+    "firebase_url": "https://ollie-safety2.firebaseio.com",
+    "project_id": "ollie-safety2",
+    "storage_bucket": "ollie-safety2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369213621621:android:1bedcfc5fec9025cdb7f3c",
+        "android_client_info": {
+          "package_name": "com.olliesafety2.simpleapplocker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369213621621-10i63s50pc1o9ngptua7suh5g07c5g4p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.olliesafety2.simpleapplocker",
+            "certificate_hash": "7f17b6b4ee4a5d650057a2cc4ff11b0ff9f60518"
+          }
+        },
+        {
+          "client_id": "369213621621-ee1rhrldf8bkurd989hqp3ceq5u58mpv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiuwV51axkDkuOnzRv5oaK8qgXSQFCWVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369213621621-ee1rhrldf8bkurd989hqp3ceq5u58mpv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

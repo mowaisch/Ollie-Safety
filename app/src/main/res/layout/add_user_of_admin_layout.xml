@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccp_autoDetectCountry="true"
+
+            app:ccp_showNameCode="false">
+
+        </com.hbb20.CountryCodePicker>
+
+        <EditText
+            android:id="@+id/search_number"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:enabled="true"
+            android:background="@drawable/text_field_layout"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:hint="Phone"
+            android:padding="5dp"></EditText>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_search_black_24dp"
+            android:padding="11dp"
+            android:tint="@color/colorPrimaryDark"
+            android:background="@drawable/text_field_layout"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/no_serach"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sorry!\n No user found againt this number"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="25dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/search_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_search_black_24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="Search users here! Add to your administration."/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/add_user_of_admin_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

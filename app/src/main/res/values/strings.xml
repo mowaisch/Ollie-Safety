@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Ollie Safety</string>
+    <string name="msg_subscribed">Msg Subscribed </string>
+    <string name="msg_subscribe_failed">Msg Subscription Failed</string>
+    <string name="title_activity_user__details">Map</string>
+</resources>

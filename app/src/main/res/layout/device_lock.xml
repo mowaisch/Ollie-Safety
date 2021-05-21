@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_weight="2"
+            android:fitsSystemWindows="true"
+            android:src="@drawable/ollie" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.ncorti.slidetoact.SlideToActView
+            android:id="@+id/emergency_call_slide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:elevation="6dp"
+            app:animation_duration="250"
+            app:area_margin="4dp"
+            app:inner_color="#FFF"
+            app:outer_color="@color/colorPrimaryDark"
+            app:slider_height="80dp"
+            app:slider_icon="@drawable/ic_call_white_24dp"
+            app:slider_locked="false"
+            app:text="Slide For Emergency Call"
+            app:text_size="12sp" />
+    </LinearLayout>
+</LinearLayout>

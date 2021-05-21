@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SignIn_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:fitsSystemWindows="true"
+                android:src="@drawable/ollie" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/sign_in_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="20dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="15dp">
+
+                <ProgressBar
+                    android:id="@+id/progress_Bar"
+                    android:layout_width="152dp"
+                    android:layout_height="128dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="30dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/sign_in_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter Number"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="30sp"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="We'll send you one-time-passcode (OTP)"
+                        android:textSize="13sp"
+                        android:typeface="sans" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/countryCodeHolder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:ccp_autoDetectCountry="true"
+                            app:ccp_showNameCode="false">
+
+                        </com.hbb20.CountryCodePicker>
+
+                        <EditText
+                            android:id="@+id/email_address"
+                            android:layout_width="120dp"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp"
+                            android:enabled="true"
+                            android:gravity="center"
+                            android:hint="Phone"
+                            android:padding="5dp"></EditText>
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/auth_progress1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="gone">
+
+                    </ProgressBar>
+
+                    <Button
+                        android:id="@+id/phone_auth"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Send" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/code_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enter OTP"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="30sp"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Please take a moment to verify your phone number. This helps us confirm your identity and secure your account."
+                        android:textColor="#F20D40"
+                        android:textSize="13sp"
+                        android:typeface="sans" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_custom"
+                        android:enabled="true"
+                        android:gravity="center"
+                        android:hint="One Time Passcode"
+                        android:inputType="number"
+                        android:padding="5dp" />
+
+                    <ProgressBar
+                        android:id="@+id/auth_progress2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/phone_auth2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Verify"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sign_up_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="15dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Information"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="50sp"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="give following information to complete account details"
+                        android:textSize="15sp"
+                        android:typeface="sans" />
+
+                    <EditText
+                        android:id="@+id/txt_name"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/edittext_custom"
+                        android:drawableStart="@drawable/ic_person_black_24dp"
+                        android:drawableLeft="@drawable/ic_person_black_24dp"
+                        android:gravity="center"
+                        android:hint="Name"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+
+                    <EditText
+                        android:id="@+id/txt_email"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_custom"
+                        android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+                        android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+                        android:gravity="center"
+                        android:hint="Email Address"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:padding="5dp" />
+
+                    <Button
+                        android:id="@+id/register"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_custom"
+                        android:text="Save"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
